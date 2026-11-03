@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Accessible personal profile page showcasing media elements and alt text best practices."
+    />
+    <title>Profile &amp; Media - Assignment 2.5</title>
+  </head>
+  <body>
+    <header id="top">
+      <h1>Developer Profile &amp; Media Showcase</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <img
+          src="media/profile.jpg"
+          alt="Illustration of a smiling person with locs, wearing a hoodie and working on a laptop."
+          width="500"
+          height="500"
+        />
+        <p>
+          Welcome! I am an aspiring front-end web developer building clean,
+          accessible HTML structures.
+        </p>
+
+        <img src="media/divider.png" alt="" width="510" height="29" />
+      </section>
+
+      <section>
+        <h2>Project Highlight</h2>
+        <figure>
+          <img
+            src="media/recipe-page.png"
+            alt="Screenshot of a recipe web page titled 'How to Prepare Jollof Rice', showing the introduction and the list of ingredients for the rice."
+            width="425"
+            height="400"
+          />
+          <figcaption>
+            The top of my Jollof Rice recipe page from Assignment 2.3, built
+            with semantic HTML headings and lists.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Audio Introduction</h2>
+        <p>Listen to a brief audio introduction of my coding journey:</p>
+
+        <audio controls>
+          <source src="media/intro-audio.mp3" type="audio/mpeg" />
+          <p>
+            Your browser cannot play audio files. You can
+            <a href="media/intro-audio.mp3"
+              >download the short voice introduction</a
+            >
+            instead.
+          </p>
+        </audio>
+
+        <details>
+          <summary>View Audio Transcript</summary>
+          <p>
+            <em
+              >"Hi. I am a front-end web developer building my HTML portfolio.
+              Welcome to my web page."</em
+            >
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Recipe Page Navigation Demo</h2>
+
+        <video controls width="368" height="431">
+          <source src="media/recipe-page-navigation.webm" type="video/webm" />
+          <p>
+            Your browser cannot play videos. You can
+            <a href="media/recipe-page-navigation.webm"
+              >download the screen recording of my website navigation</a
+            >
+            instead.
+          </p>
+        </video>
+
+        <details>
+          <summary>Video Description</summary>
+          <p>
+            <em
+              >Screen recording of about 18 seconds, with no sound. I start on
+              the Home page of my website and click through the navigation links
+              to visit the Services, About, Projects and Contact pages. I go
+              back to the Services page, which is inside the pages folder,
+              several times between the other pages, and the recording ends on
+              the Services page.</em
+            >
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 My Portfolio. <a href="#top">Back to top</a></p>
+    </footer>
+  </body>
+</html>
