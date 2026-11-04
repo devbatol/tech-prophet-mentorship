@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Assignment 2.7 - Results and Timetable Data Tables representing genuine tabular data with semantic HTML."
+    />
+    <title>School Records &amp; Class Schedules | HTML Foundations</title>
+  </head>
+  <body>
+    <header>
+      <h1>School Records &amp; Class Schedules</h1>
+      <p>Student assessment records and weekly class schedules.</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Student Assessment Results</h2>
+        <table>
+          <caption>
+            Student assessment scores in HTML, CSS, and JavaScript, including
+            individual scores and class totals.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">HTML</th>
+              <th scope="col">CSS</th>
+              <th scope="col">JavaScript</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ada</th>
+              <td>82</td>
+              <td>71</td>
+              <td>69</td>
+              <td>222</td>
+            </tr>
+            <tr>
+              <th scope="row">Musa</th>
+              <td>75</td>
+              <td>81</td>
+              <td>74</td>
+              <td>230</td>
+            </tr>
+            <tr>
+              <th scope="row">Grace</th>
+              <td>91</td>
+              <td>88</td>
+              <td>80</td>
+              <td>259</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row">Class Totals</th>
+              <td>248</td>
+              <td>240</td>
+              <td>223</td>
+              <td>711</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section>
+        <h2>Weekly Class Timetable</h2>
+        <table>
+          <caption>
+            Weekly timetable for Senior Secondary classes, including break times
+            and daily closing period.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Day / Time</th>
+              <th scope="col">08:10 – 08:50 (1st)</th>
+              <th scope="col">08:50 – 09:30 (2nd)</th>
+              <th scope="col">09:30 – 10:10 (3rd)</th>
+              <th scope="col">10:10 – 10:25 (Short Break)</th>
+              <th scope="col">10:25 – 11:05 (4th)</th>
+              <th scope="col">11:05 – 11:45 (5th)</th>
+              <th scope="col">11:45 – 12:15 (Long Break)</th>
+              <th scope="col">12:15 – 12:55 (6th)</th>
+              <th scope="col">12:55 – 13:35 (7th)</th>
+              <th scope="col">13:35 – 14:15 (8th)</th>
+              <th scope="col">14:15 – 14:55 (9th)</th>
+              <th scope="col">14:55 – 15:35 (10th)</th>
+              <th scope="col">15:40 (Closing Period)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+              <td>English Language</td>
+              <td>Mathematics</td>
+              <td>Biology</td>
+              <td rowspan="5">Short Break</td>
+              <td>Physics</td>
+              <td>Chemistry</td>
+              <td rowspan="5">Long Break</td>
+              <td>Civic Education</td>
+              <td>Agricultural Science</td>
+              <td>Economics</td>
+              <td>Yoruba</td>
+              <td>Accounts</td>
+              <td rowspan="5">Closing Period</td>
+            </tr>
+            <tr>
+              <th scope="row">Tuesday</th>
+              <td>Mathematics</td>
+              <td>English Language</td>
+              <td>Government</td>
+              <td>Chemistry</td>
+              <td>Biology</td>
+              <td>Physics</td>
+              <td>Commerce</td>
+              <td>C.R.S.</td>
+              <td>Literature-in-English</td>
+              <td>Geography</td>
+            </tr>
+            <tr>
+              <th scope="row">Wednesday</th>
+              <td>Biology</td>
+              <td>Mathematics</td>
+              <td>English Language</td>
+              <td>Economics</td>
+              <td>Physics</td>
+              <td>Chemistry</td>
+              <td>Civic Education</td>
+              <td colspan="2">Computer Studies</td>
+              <td>Agricultural Science</td>
+            </tr>
+            <tr>
+              <th scope="row">Thursday</th>
+              <td>English Language</td>
+              <td>Physics</td>
+              <td>Mathematics</td>
+              <td>Biology</td>
+              <td>Yoruba</td>
+              <td colspan="2">Further Mathematics</td>
+              <td>Civic Education</td>
+              <td>Economics</td>
+              <td>Agricultural Science</td>
+            </tr>
+            <tr>
+              <th scope="row">Friday</th>
+              <td>Mathematics</td>
+              <td>English Language</td>
+              <td>Animal Husbandry</td>
+              <td>Agricultural Science</td>
+              <td>Yoruba</td>
+              <td colspan="5">Free Period</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 School Administration</p>
+    </footer>
+  </body>
+</html>
