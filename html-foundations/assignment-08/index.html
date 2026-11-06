@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Assignment 2.8 - Accessible Mentorship Application Form featuring semantic groups, native constraints, and explicit labeling."
+    />
+    <title>Mentorship Application Form | HTML Foundations</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mentorship Program Application</h1>
+      <p>
+        Please fill out the form below to apply for the upcoming mentorship
+        cohort. All fields marked with an asterisk (*) are required.
+      </p>
+    </header>
+
+    <main>
+      <!--
+    FORM SUBMISSION CONFIGURATION:
+
+    - method="POST": Sends the submitted form data in the HTTP request body
+      rather than exposing it in the URL query string.
+
+    - action="/submit-application": Specifies the intended backend endpoint
+      that would receive the application data.
+
+    - Note: This is a static HTML demonstration. No working backend is
+      connected, so the form will not actually store or process applications.
+
+    - Security note: POST does not automatically encrypt submitted data.
+      HTTPS is needed to protect data while it is being transmitted.
+-->
+      <form action="/submit-application" method="POST">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <div>
+            <label for="fullName"
+              >Full Name <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="text"
+              id="fullName"
+              name="full_name"
+              required
+              minlength="2"
+              maxlength="100"
+              autocomplete="name"
+              placeholder="e.g., Alex Johnson"
+            />
+          </div>
+
+          <div>
+            <label for="email"
+              >Email Address <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+              placeholder="e.g., alex.johnson@example.com"
+            />
+          </div>
+
+          <div>
+            <label for="phone">Phone Number (Optional)</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+              placeholder="e.g., +2348012345678"
+            />
+          </div>
+
+          <div>
+            <label for="dob"
+              >Date of Birth <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="date"
+              id="dob"
+              name="date_of_birth"
+              required
+              min="1940-01-01"
+              max="2026-11-05"
+              autocomplete="bday"
+            />
+          </div>
+
+          <fieldset>
+            <legend>Gender (Optional)</legend>
+            <div>
+              <input
+                type="radio"
+                id="genderFemale"
+                name="gender"
+                value="female"
+              />
+              <label for="genderFemale">Female</label>
+            </div>
+            <div>
+              <input type="radio" id="genderMale" name="gender" value="male" />
+              <label for="genderMale">Male</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="genderNonBinary"
+                name="gender"
+                value="non-binary"
+              />
+              <label for="genderNonBinary">Non-binary</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="genderPreferNot"
+                name="gender"
+                value="prefer-not-to-say"
+              />
+              <label for="genderPreferNot">Prefer not to say</label>
+            </div>
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>Development Information &amp; Background</legend>
+
+          <div>
+            <label for="experienceLevel"
+              >Current Experience Level <span aria-hidden="true">*</span></label
+            >
+            <select id="experienceLevel" name="experience_level" required>
+              <option value="" disabled selected>
+                -- Select your level --
+              </option>
+              <option value="beginner">Absolute Beginner</option>
+              <option value="novice">Novice (HTML/CSS Basics)</option>
+              <option value="intermediate">
+                Intermediate (JavaScript / Responsive Design)
+              </option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>Areas of Interest (Optional)</legend>
+            <div>
+              <input
+                type="checkbox"
+                id="interestHtmlCss"
+                name="interests"
+                value="html_css"
+              />
+              <label for="interestHtmlCss"
+                >Semantic HTML &amp; CSS Layouts</label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="interestJs"
+                name="interests"
+                value="javascript"
+              />
+              <label for="interestJs">Vanilla JavaScript</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="interestAccessibility"
+                name="interests"
+                value="accessibility"
+              />
+              <label for="interestAccessibility"
+                >Web Accessibility (a11y)</label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="interestCs50"
+                name="interests"
+                value="cs50"
+              />
+              <label for="interestCs50">Computer Science Fundamentals</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              Preferred Learning Track <span aria-hidden="true">*</span>
+            </legend>
+            <div>
+              <input
+                type="radio"
+                id="trackFrontend"
+                name="learning_track"
+                value="frontend"
+                required
+              />
+              <label for="trackFrontend">Front-End Web Development</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="trackFullstack"
+                name="learning_track"
+                value="fullstack"
+              />
+              <label for="trackFullstack">Full-Stack Development</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="trackFoundations"
+                name="learning_track"
+                value="foundations"
+              />
+              <label for="trackFoundations"
+                >CS Foundations &amp; Coding Logic</label
+              >
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="githubUrl">GitHub Profile URL (Optional)</label>
+            <input
+              type="url"
+              id="githubUrl"
+              name="github_profile"
+              placeholder="https://github.com/username"
+              pattern="https://github\.com/.+"
+              title="Must be a valid GitHub profile URL with a username starting with https://github.com/"
+            />
+          </div>
+
+          <div>
+            <label for="motivation"
+              >Why do you want to join this mentorship?
+              <span aria-hidden="true">*</span></label
+            >
+            <textarea
+              id="motivation"
+              name="motivation"
+              rows="5"
+              required
+              minlength="50"
+              maxlength="500"
+              placeholder="Briefly describe your goals (minimum 50 characters)..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Availability &amp; Declarations</legend>
+
+          <div>
+            <label for="availability"
+              >Weekly Time Commitment <span aria-hidden="true">*</span></label
+            >
+            <select id="availability" name="weekly_availability" required>
+              <option value="" disabled selected>
+                -- Choose hours per week --
+              </option>
+              <option value="5-10">5 - 10 hours / week</option>
+              <option value="10-20">10 - 20 hours / week</option>
+              <option value="20+">20+ hours / week</option>
+            </select>
+          </div>
+
+          <div>
+            <input
+              type="checkbox"
+              id="rulesAgreement"
+              name="agreement"
+              value="agreed"
+              required
+            />
+            <label for="rulesAgreement"
+              >I agree to abide by the mentorship community rules and code of
+              conduct <span aria-hidden="true">*</span></label
+            >
+          </div>
+        </fieldset>
+
+        <div>
+          <button type="submit">Submit Application</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Mentorship Program. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
