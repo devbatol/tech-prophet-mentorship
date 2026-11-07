@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Assignment 2.9 - HTML Accessibility Repair demonstrating semantic markup, proper heading hierarchy, and accessible form controls."
+    />
+    <title>Accessibility Repairs | HTML Foundations</title>
+    <script>
+      function login() {
+        alert("Login action triggered (Placeholder function)");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Company Portal &amp; Services</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li>
+            <a href="/services">View our web development and design services</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          This is a mockup company portal created to demonstrate semantic HTML
+          and accessibility repairs. Below is a stock photo of a collaborative
+          team workspace:
+        </p>
+        <img
+          src="team.jpg"
+          alt="Six people sit around a long white table in an office, each working on a laptop."
+          width="900"
+          height="600"
+        />
+      </section>
+
+      <section>
+        <h2>User Login</h2>
+        <button type="button" onclick="login()">Log In</button>
+      </section>
+
+      <section>
+        <h2>Contact Inquiry</h2>
+        <form action="/submit" method="POST">
+          <div>
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="full_name"
+              required
+              autocomplete="name"
+              placeholder="e.g., Alex Johnson"
+            />
+          </div>
+          <div>
+            <button type="submit">Submit Inquiry</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Company Portal. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
