@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Batol's Cafe | Home</title>
+</head>
+
+<body>
+  <header id="top">
+    <h1>Batol's Cafe</h1>
+    <nav>
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a> | <a href="#menu">Menu</a></li>
+        <li><a href="menu.html">Full Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="about">
+      <h2>About Batol's Cafe</h2>
+      <p>
+        A small, friendly cafe serving fresh coffee and snacks every morning.
+      </p>
+      <img src="coffee.jpg"
+        alt="A white cup of coffee seen from above, with a flower pattern in the foam and a coffee bean at its centre, on a grey wooden table."
+        width="600" height="400">
+    </section>
+
+    <section id="menu">
+      <h2>Today's Menu</h2>
+      <div class="menu-items">
+        <p>Espresso: a small, strong coffee.</p>
+        <p>Cappuccino: espresso with steamed milk and foam.</p>
+        <p>Chin chin: a crunchy snack to share.</p>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <h2>Newsletter</h2>
+      <form id="newsletter-form" action="/subscribe" method="POST">
+        <div>
+          <label for="name-input">Your name</label>
+          <input type="text" id="name-input" name="name">
+        </div>
+        <div>
+          <label for="email-input">Your email</label>
+          <input type="email" id="email-input" name="email" placeholder="Your email">
+        </div>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Batol's Cafe (a fictional cafe).</p>
+  </footer>
+</body>
+
+</html>
