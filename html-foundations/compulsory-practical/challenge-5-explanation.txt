@@ -1,0 +1,39 @@
+Challenge 5: Explanation of every repair
+
+1. Document structure and metadata
+Problem: The document had no <!DOCTYPE html>, there was no <head> or <body>, no character encoding was declared, and the <html> element was the only wrapper.
+Fix: I added <!DOCTYPE html>, a <head> with <meta charset="UTF-8"> and the viewport meta tag, and a <body> around the visible content.
+Why it matters: Without a doctype the browser switches to quirks mode, and without a head and body it builds them itself. Without a declared character encoding it has to guess, so symbols like © or accented letters can show wrongly. The page can look different in different browsers.
+
+2. Language
+Problem: The <html> element had no lang attribute.
+Fix: I added lang="en" to the <html> element.
+Why it matters: Screen readers use it to pick the right voice and pronunciation rules, and browsers use it for translation and spell-checking.
+
+3. Title in the head
+Problem: The <title> sat directly inside <html> and not inside a <head>.
+Fix: I moved the <title> inside the <head>, keeping the text "My page".
+Why it matters: The title shows in the browser tab and in search results, and a screen reader announces it first when the page opens, so people know which page they are on.
+
+4. Heading level
+Problem: The first heading on the page was an <h3>, not an <h1>, which breaks the expected heading order.
+Fix: I changed the <h3> to an <h1>, keeping the text "My Website".
+Why it matters: The first heading should be the h1 because it names the page's main topic. Screen reader users jump between headings by level, and starting at h3 suggests there are missing sections above it.
+
+5. Unclosed paragraph
+Problem: <p>Welcome was never closed with </p>, so the image on the next line ended up inside the paragraph. The checker did not report it, because the closing </p> is optional in HTML.
+Fix: I closed the paragraph with </p> so the image is no longer inside it.
+Why it matters: Because the paragraph was never closed, the image became part of the paragraph, so the text and the image were treated as one block. The browser only ended the paragraph when it reached the div. Closing the tag makes the structure what I meant, instead of leaving it to the browser's guess.
+
+6. Image
+Problem: The <img> had only a src. It had no alt text, and no width and height.
+Fix: I added alt text describing the illustration, and width="500" and height="500".
+Why it matters: Without alt text a screen reader skips the image or reads out the file name (me.jpg), so the user gets no information. The width and height let the browser reserve space, so the page does not jump while the image loads.
+
+7. Div used as a button
+Problem: A <div> with an inline onclick was used as a button. It cannot get keyboard focus, does not respond to Enter or Space, and is not announced as a button.
+Fix: I replaced it with a native <button type="submit"> inside a <form action="#" method="post">. I added no JavaScript.
+Why it matters: A native button can be reached with Tab, works with Enter and Space, and is announced as a button, all built in. So no JavaScript or ARIA attributes were needed to imitate it.
+
+Summary: The checker reported 4 messages (the missing doctype and language, the missing alt text and the heading level). It did not report the missing head and body, the title outside the head, the unclosed paragraph or the div used as a button, so reading the code was still needed.
+
