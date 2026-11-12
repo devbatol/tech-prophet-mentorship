@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Apply to join the team at Batol's Cafe. Submit your application for barista, kitchen staff, or management positions.">
+  <title>Batol's Cafe | Join Our Team</title>
+</head>
+
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <header id="top">
+    <p><a href="../index.html">Batol's Cafe</a></p>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Menu and Services</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="application.html">Join Our Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Join Our Team</h1>
+
+    <!-- Note: This form is a frontend design demonstration and does not connect to a live backend. -->
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Your Details</legend>
+        <div>
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full_name" required minlength="2" maxlength="50" autocomplete="name">
+        </div>
+        <div>
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The Role</legend>
+        <div>
+          <label for="position">Position Applied For:</label>
+          <select id="position" name="position" required>
+            <option value="">-- Please select a position --</option>
+            <option value="barista">Barista</option>
+            <option value="baker">Baker / Kitchen Staff</option>
+            <option value="shift-supervisor">Shift Supervisor</option>
+            <option value="front-desk">Front Desk / Cashier</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Shift Preference</legend>
+          <div>
+            <input type="radio" id="shift-morning" name="shift" value="morning" required>
+            <label for="shift-morning">Morning Shift (6:30 AM - 2:00 PM)</label>
+          </div>
+          <div>
+            <input type="radio" id="shift-afternoon" name="shift" value="afternoon">
+            <label for="shift-afternoon">Afternoon Shift (1:30 PM - 8:30 PM)</label>
+          </div>
+          <div>
+            <input type="radio" id="shift-flexible" name="shift" value="flexible">
+            <label for="shift-flexible">Flexible</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Days Available to Work</legend>
+          <div>
+            <input type="checkbox" id="day-mon" name="days" value="monday">
+            <label for="day-mon">Monday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="day-tue" name="days" value="tuesday">
+            <label for="day-tue">Tuesday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="day-wed" name="days" value="wednesday">
+            <label for="day-wed">Wednesday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="day-thu" name="days" value="thursday">
+            <label for="day-thu">Thursday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="day-fri" name="days" value="friday">
+            <label for="day-fri">Friday</label>
+          </div>
+          <div>
+            <input type="checkbox" id="day-sat" name="days" value="saturday">
+            <label for="day-sat">Saturday</label>
+          </div>
+        </fieldset>
+      </fieldset>
+
+      <fieldset>
+        <legend>About You</legend>
+        <div>
+          <label for="reason">Why would you like to join Batol's Cafe?</label>
+          <textarea id="reason" name="reason" rows="5" required minlength="20" maxlength="500"></textarea>
+        </div>
+        <div>
+          <label for="start-date">Earliest Start Date:</label>
+          <input type="date" id="start-date" name="start_date" min="2026-11-12">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Confirmation</legend>
+        <div>
+          <input type="checkbox" id="terms" name="terms_agreement" value="agreed" required>
+          <label for="terms">I confirm that the information provided is accurate and agree to have my application
+            reviewed.</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <button type="submit">Submit Application</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <address>
+      Batol's Cafe<br>
+      123 Espresso Lane<br>
+      Email: <a href="mailto:thebcafe@example.com">thebcafe@example.com</a>
+    </address>
+    <p>&copy; 2026 Batol's Cafe. All rights reserved.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+</body>
+
+</html>
